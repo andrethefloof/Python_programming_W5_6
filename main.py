@@ -13,7 +13,8 @@ def main():
             count = 0
             print("Cleared count!")
         elif input_choice == "0":
-            print("Exiting program.\n")
+            print("Exiting program.")
+            print()
             print("Program ending.")
             break
 def showOptions():
