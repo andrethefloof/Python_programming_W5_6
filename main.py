@@ -4,19 +4,20 @@ def main():
     while True:
         showOptions()
         input_choice = askChoice()
-        if input_choice == "1":
+        if input_choice == 1:
             print(f"Current count - {count}")
-        elif input_choice == "2":
+        elif input_choice == 2:
             count += 1
             print(f"Count increased!")
-        elif input_choice == "3":
+        elif input_choice == 3:
             count = 0
             print("Cleared count!")
-        elif input_choice == "0":
-            print("Exiting program.")
-            print()
+        elif input_choice == 0:
+            print("Exiting program.\n")
             print("Program ending.")
             break
+        else:
+            print("Unknown option!\n")
 def showOptions():
     print("Options:")
     print("1 - Show count")
@@ -27,7 +28,6 @@ def showOptions():
 def askChoice():
     choice = input("Your choice: ")
     if choice.isnumeric():
-        return choice
-    else:
-        print("Unknown option!\n")
+        return int(choice)
+    return -1
 main()
